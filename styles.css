@@ -1,86 +1,50 @@
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 20px;
 }
 
-.container {
-    max-width: 600px;
-    margin: auto;
+.calculator {
+    background: white;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="tel"],
-input[type="date"],
-select {
+#display {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    height: 40px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: right;
 }
 
-button {
-    margin-top: 20px;
-    padding: 10px;
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.btn {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
     background-color: #007BFF;
     color: white;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-    width: 100%;
+    transition: background-color 0.3s;
 }
 
-button:hover {
+.btn:hover {
     background-color: #0056b3;
 }
 
-#availableTimesContainer {
-    margin-top: 20px;
+.operator {
+    background-color: #28a745;
 }
 
-.date-container {
-    margin-bottom: 20px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 5px;
-}
-
-.available {
-    background-color: #e7f7e7;
-}
-
-.occupied {
-    background-color: #f8d7da;
-    color: #721c24;
-}
-
-button.cancel {
-    background-color: #dc3545;
-    margin-top: 10px;
+.operator:hover {
+    background-color: #218838;
 }
