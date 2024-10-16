@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Citas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agendar Cita</h1>
+        <form id="appointmentForm">
+            <label for="patientName">Nombre del Paciente:</label>
+            <input type="text" id="patientName" required>
+
+            <label for="patientPhone">Teléfono:</label>
+            <input type="tel" id="patientPhone" required>
+
+            <label for="appointmentDate">Fecha de la Cita:</label>
+            <input type="date" id="appointmentDate" required>
+
+            <label for="appointmentTime">Hora de la Cita:</label>
+            <select id="appointmentTime" required>
+                <option value="">Seleccione una hora</option>
+            </select>
+
+            <label for="appointmentReason">Motivo de la Cita:</label>
+            <select id="appointmentReason" required>
+                <option value="Consulta">Consulta</option>
+                <option value="Revisión">Revisión</option>
+                <option value="Otro">Otro</option>
+            </select>
+
+            <label id="otherReasonLabel" for="otherReason" style="display: none;">Especificar:</label>
+            <input type="text" id="otherReason" style="display: none;">
+
+            <button type="submit">Agendar Cita</button>
+        </form>
+
+        <div id="availableTimesContainer"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -121,6 +121,7 @@ function markTimeAsOccupied(date, time, patientName, patientPhone, reason) {
 function createCancelButton(date, time, patientName, patientPhone, reason) {
     const cancelButton = document.createElement('button');
     cancelButton.textContent = 'Cancelar';
+    cancelButton.classList.add('cancel');
     cancelButton.addEventListener('click', () => cancelAppointment(date, time, patientName, patientPhone, reason));
     return cancelButton;
 }

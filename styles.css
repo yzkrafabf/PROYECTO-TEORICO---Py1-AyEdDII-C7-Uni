@@ -1,6 +1,6 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #eef2f3; /* Color de fondo más suave */
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
     margin: 0;
     padding: 20px;
 }
@@ -8,21 +8,21 @@ body {
 .container {
     max-width: 600px;
     margin: auto;
-    background: #ffffff; /* Color blanco para el contenedor */
-    padding: 30px; /* Más espacio interno */
-    border-radius: 10px; /* Bordes más redondeados */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
+h1 {
     text-align: center;
-    color: #333; /* Color de texto más oscuro */
+    color: #333;
 }
 
 label {
     display: block;
-    margin: 15px 0 5px;
-    font-weight: bold; /* Texto en negrita para etiquetas */
+    margin-top: 10px;
+    font-weight: bold;
 }
 
 input[type="text"],
@@ -30,73 +30,57 @@ input[type="tel"],
 input[type="date"],
 select {
     width: 100%;
-    padding: 12px; /* Más espacio en los campos */
-    margin-bottom: 20px;
+    padding: 10px;
+    margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px; /* Bordes redondeados */
-    font-size: 16px; /* Tamaño de fuente más grande */
-    transition: border-color 0.3s; /* Transición suave */
-}
-
-input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="date"]:focus,
-select:focus {
-    border-color: #28a745; /* Color verde al enfocar */
-    outline: none; /* Sin contorno */
+    border-radius: 5px;
 }
 
 button {
-    width: 100%;
-    padding: 12px; /* Más espacio en los botones */
-    background-color: #28a745; /* Color verde */
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007BFF;
     color: white;
     border: none;
-    border-radius: 5px; /* Bordes redondeados */
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px; /* Tamaño de fuente más grande */
-    transition: background-color 0.3s; /* Transición suave */
+    width: 100%;
 }
 
 button:hover {
-    background-color: #218838; /* Color verde más oscuro al pasar el mouse */
+    background-color: #0056b3;
+}
+
+#availableTimesContainer {
+    margin-top: 20px;
+}
+
+.date-container {
+    margin-bottom: 20px;
 }
 
 ul {
     list-style-type: none;
-    margin-top: 20px;
-    padding: 0; /* Sin padding */
+    padding: 0;
 }
 
 li {
-    padding: 12px; /* Más espacio en las citas */
-    background-color: #f9f9f9; /* Color de fondo suave */
-    margin-bottom: 10px;
-    border-radius: 5px; /* Bordes redondeados */
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Centrar verticalmente */
-}
-
-li button {
-    background-color: #dc3545; /* Color rojo para cancelar */
-    color: white;
-    border: none;
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 6px 12px; /* Espacio alrededor del botón */
-    cursor: pointer;
-    transition: background-color 0.3s; /* Transición suave */
-}
-
-li button:hover {
-    background-color: #c82333; /* Color rojo más oscuro al pasar el mouse */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
 }
 
 .available {
-    font-weight: bold; /* Destacar horarios disponibles */
+    background-color: #e7f7e7;
 }
 
 .occupied {
-    color: #dc3545; /* Color rojo para mostrar que está ocupado */
-    font-weight: bold; /* Destacar horarios ocupados */
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+button.cancel {
+    background-color: #dc3545;
+    margin-top: 10px;
 }
