@@ -127,7 +127,7 @@ function createCancelButton(date, time, patientName, patientPhone, reason) {
 
 // Función para cancelar la cita
 function cancelAppointment(date, time, patientName, patientPhone, reason) {
-    const code = prompt('Ingrese el código para cancelar la cita (****):');
+    const code = prompt('Ingrese el código para cancelar la cita (1234):');
     if (code === '1234') {
         const dateContainers = availableTimesContainer.getElementsByClassName('date-container');
 
