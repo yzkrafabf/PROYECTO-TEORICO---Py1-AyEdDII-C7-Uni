@@ -1,59 +1,102 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #eef2f3; /* Color de fondo más suave */
+    margin: 0;
+    padding: 20px;
 }
 
 .container {
-    text-align: center;
-}
-
-h1 {
-    margin-bottom: 20px;
-}
-
-.board {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-    gap: 5px;
+    max-width: 600px;
     margin: auto;
+    background: #ffffff; /* Color blanco para el contenedor */
+    padding: 30px; /* Más espacio interno */
+    border-radius: 10px; /* Bordes más redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
 }
 
-.cell {
-    width: 100px;
-    height: 100px;
-    background-color: #fff;
-    border: 2px solid #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
+h1, h2 {
+    text-align: center;
+    color: #333; /* Color de texto más oscuro */
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold; /* Texto en negrita para etiquetas */
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px; /* Más espacio en los campos */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente más grande */
+    transition: border-color 0.3s; /* Transición suave */
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #28a745; /* Color verde al enfocar */
+    outline: none; /* Sin contorno */
+}
+
+button {
+    width: 100%;
+    padding: 12px; /* Más espacio en los botones */
+    background-color: #28a745; /* Color verde */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 16px; /* Tamaño de fuente más grande */
+    transition: background-color 0.3s; /* Transición suave */
 }
 
-.cell:hover {
-    background-color: #e0e0e0;
+button:hover {
+    background-color: #218838; /* Color verde más oscuro al pasar el mouse */
 }
 
-#reset-button {
+ul {
+    list-style-type: none;
     margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
+    padding: 0; /* Sin padding */
 }
 
-#status {
-    margin-top: 10px;
-    font-size: 1.2em;
+li {
+    padding: 12px; /* Más espacio en las citas */
+    background-color: #f9f9f9; /* Color de fondo suave */
+    margin-bottom: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centrar verticalmente */
+}
+
+li button {
+    background-color: #dc3545; /* Color rojo para cancelar */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 6px 12px; /* Espacio alrededor del botón */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+li button:hover {
+    background-color: #c82333; /* Color rojo más oscuro al pasar el mouse */
+}
+
+.available {
+    font-weight: bold; /* Destacar horarios disponibles */
+}
+
+.occupied {
+    color: #dc3545; /* Color rojo para mostrar que está ocupado */
+    font-weight: bold; /* Destacar horarios ocupados */
 }
